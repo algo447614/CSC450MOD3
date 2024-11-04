@@ -1,0 +1,49 @@
+BEGIN PROGRAM
+
+// Declare variables
+DECLARE INTEGER num1, num2, num3
+DECLARE POINTER ptr1, ptr2, ptr3
+
+// Get user input
+DISPLAY "Enter three integer values:"
+DISPLAY "Enter first number: "
+INPUT num1
+DISPLAY "Enter second number: "
+INPUT num2
+DISPLAY "Enter third number: "
+INPUT num3
+
+// Allocate memory for pointers
+ptr1 = ALLOCATE MEMORY for INTEGER
+ptr2 = ALLOCATE MEMORY for INTEGER
+ptr3 = ALLOCATE MEMORY for INTEGER
+
+// Store values in pointer locations
+STORE num1 in location pointed to by ptr1
+STORE num2 in location pointed to by ptr2
+STORE num3 in location pointed to by ptr3
+
+// Display information
+DISPLAY "Displaying values and memory addresses:"
+DISPLAY "----------------------------------------"
+
+DISPLAY "Variable num1: " + num1 + " Address: " + ADDRESS OF num1
+DISPLAY "Pointer ptr1: " + VALUE AT ptr1 + " Address: " + ptr1
+
+DISPLAY "Variable num2: " + num2 + " Address: " + ADDRESS OF num2
+DISPLAY "Pointer ptr2: " + VALUE AT ptr2 + " Address: " + ptr2
+
+DISPLAY "Variable num3: " + num3 + " Address: " + ADDRESS OF num3
+DISPLAY "Pointer ptr3: " + VALUE AT ptr3 + " Address: " + ptr3
+
+// Clean up memory
+FREE MEMORY at ptr1
+FREE MEMORY at ptr2
+FREE MEMORY at ptr3
+
+// Set pointers to null
+ptr1 = NULL
+ptr2 = NULL
+ptr3 = NULL
+
+END PROGRAM
